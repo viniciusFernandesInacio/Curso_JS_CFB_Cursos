@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de erros</title>
+
+    <script>
+
+        var num;
+
+        try{//try e usado em operacoes criticas que tem chance de dar erro
+            num=prompt("Digite um número: ");
+            if(num>10){
+                throw new Error("Valor inválido, o valor deve ser menor ou igual a 10!");//throw gera um erro automaticamente e me permite mandar uma mensagem para o usuário
+            }
+        }catch(e){//catch e usado para fazer o tratamento do erro
+            console.log("Mensagem de erro: " + e.message);//exibe mensagem no terminal(console)
+            num=10;
+        }finally{//finally e executado no final do codigo independente do que acontecer
+            document.write("Valor: " + num);
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
