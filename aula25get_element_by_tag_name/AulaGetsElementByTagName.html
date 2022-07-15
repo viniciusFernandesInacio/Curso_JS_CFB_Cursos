@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByTagName</title>
+</head>
+<body>
+
+    <h2>Picanha</h2>
+    <p>Bisteca</p>
+    <h2>Alcatra</h2>
+    <p>Contra-File com osso</p>
+    <h2>Linguiça</h2>
+
+    <hr/>
+
+    <script>
+   
+        //var tagsP=document.getElementsByTagName("p");//getElementsByTagName pega as tags e cria um array
+        //var tagsP=document.getElementsByTagName("p"[3]);//assim eu capturo apenas o elemento do indice tres os inves de criar uma array
+        var tagsP=document.getElementsByTagName("*");//uso o * para indicar que eu quero selecionar todas as tags contidas na pagina html
+
+        document.write(tagsP[0].innerHTML);//uso o innerHtml para obter o valor
+        tagsP[8].style.color="#f00";
+        tagsP[8].style.innerHTML="Maminha";
+
+        /*for(var i=0;i<tagsP.length;i++){
+            tagsP[i].style.color="#f00";
+        }*/
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML e getElementById</title>
+</head>
+<body>
+    
+    <p id="texto">Mamona</p>
+    <input type="text" id="cxtexto" value="Abacate">
+    <div id="dv">Arroz com mostarda</div>
+
+    <script>
+
+        var cxt=document.getElementById("texto").innerHTML="Laranja";//a tag p nao aceita value entao eu uso o innerHTML para obter(capturar) ou alterar o valor ali contido
+        document.getElementById("dv").innerHTML="Feijão com azeitona"
+        alert(cxt);
+
+    </script>
+
+</body>
+</html>
